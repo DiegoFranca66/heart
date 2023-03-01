@@ -1,0 +1,47 @@
+#coracao {
+	width: 10vw;
+	height: 10vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg) scale(3);
+	background-color: red;
+	animation: pulsa 1s ease-in-out infinite;
+}
+
+#coracao:before,
+#coracao:after {
+	content: "";
+	position: absolute;
+	background-color: inherit;
+}
+
+#coracao:before {
+	width: 10vw;
+	height: 10vw;
+	top: -5vw;
+	left: 0;
+	border-radius: 5vw 5vw 0 0;
+}
+
+#coracao:after {
+	width: 10vw;
+	height: 10vw;
+	top: 0;
+	left: 5vw;
+	border-radius: 0 5vw 5vw 0;
+}
+
+@keyframes pulsa {
+	0% {
+		transform: translate(-50%, -50%) rotate(-45deg) scale(3);
+	}
+
+	50% {
+		transform: translate(-50%, -50%) rotate(-45deg) scale(3.6);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(-45deg) scale(3);
+	}
+}
